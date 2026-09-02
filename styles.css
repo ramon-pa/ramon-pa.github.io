@@ -1,0 +1,146 @@
+:root {
+  --mb-purple: #8E4EC6;
+  --mb-blue: #2196F3;
+  --ink: #212529;
+  --muted: #6c757d;
+}
+
+body {
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  border-bottom: 3px solid var(--mb-blue);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  border-left: 4px solid var(--mb-purple);
+  padding-left: 0.6rem;
+  margin-top: 2.5rem;
+}
+
+.hero {
+  padding: 2rem 0 1rem 0;
+}
+
+.hero .tagline {
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.badge-role {
+  display: inline-block;
+  background: rgba(33, 150, 243, 0.1);
+  color: var(--mb-blue);
+  border: 1px solid var(--mb-blue);
+  border-radius: 999px;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+}
+
+.status-pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.status-active {
+  background: rgba(33, 150, 243, 0.12);
+  color: var(--mb-blue);
+}
+
+.status-pending {
+  background: rgba(142, 78, 198, 0.12);
+  color: var(--mb-purple);
+}
+
+.status-early {
+  background: rgba(108, 117, 125, 0.12);
+  color: var(--muted);
+}
+
+.card-project {
+  border: 1px solid #e9ecef;
+  border-left: 4px solid var(--mb-purple);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.card-project.card-flagship {
+  border-left-color: var(--mb-blue);
+}
+
+.callout-caveat {
+  background: rgba(142, 78, 198, 0.06);
+  border-left: 4px solid var(--mb-purple);
+  border-radius: 4px;
+  padding: 0.8rem 1.1rem;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.stat {
+  min-width: 140px;
+}
+
+.stat .stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--mb-blue);
+}
+
+.stat .stat-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---- Bilingual toggle ---- */
+:root[data-lang="es"] .lang-en { display: none !important; }
+:root[data-lang="en"] .lang-es { display: none !important; }
+:root:not([data-lang]) .lang-en { display: none !important; }
+
+#lang-switch {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 1000;
+  background: var(--mb-blue);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+#lang-switch:hover {
+  filter: brightness(1.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  body { color: #e9ecef; background: #1a1a1a; }
+}
