@@ -1,0 +1,21 @@
+<button id="lang-switch" type="button" aria-label="Switch language / Cambiar idioma">
+  <span class="lang-es">EN</span><span class="lang-en">ES</span>
+</button>
+<script>
+(function () {
+  var root = document.documentElement;
+  var stored = null;
+  try { stored = localStorage.getItem('site-lang'); } catch (e) {}
+  var initial = stored || (navigator.language && navigator.language.slice(0, 2) === 'es' ? 'es' : 'en');
+  root.setAttribute('data-lang', initial);
+
+  var btn = document.getElementById('lang-switch');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-lang') === 'es' ? 'en' : 'es';
+      root.setAttribute('data-lang', current);
+      try { localStorage.setItem('site-lang', current); } catch (e) {}
+    });
+  }
+})();
+</script>

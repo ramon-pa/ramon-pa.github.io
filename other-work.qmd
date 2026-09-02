@@ -1,0 +1,105 @@
+---
+pagetitle: "Otros Trabajos / Other Work"
+description: "Early GIS work, biology research, and consulting"
+---
+
+# <span class="lang-es">Otros Trabajos</span><span class="lang-en">Other Work</span>
+
+## <span class="lang-es">Clasificación de Cobertura — Estancia Los Huemules</span><span class="lang-en">Land-Cover Classification — Estancia Los Huemules</span>
+
+::: {.lang-es}
+<span class="status-pill status-early">🌱 Trabajo temprano, 2024</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-early">🌱 Early work, 2024</span>
+:::
+
+::: {.lang-es}
+Uno de mis primeros proyectos propios de teledetección, hecho por iniciativa personal después de
+una temporada como técnico de campo en la Reserva Natural Estancia Los Huemules (El Chaltén).
+Combiné el conocimiento directo del terreno con imágenes Sentinel-2 (marzo 2021) para entrenar
+un clasificador Random Forest que distingue Bosque, Agua, Nieve y Roca sobre 15.000 hectáreas de
+terreno andino. El resultado autoreportado en ese momento fue ~98% de precisión — una cifra que
+hoy trataría con más rigor metodológico, pero que marcó el punto de partida de todo lo que vino
+después.
+:::
+::: {.lang-en}
+One of my first independent remote-sensing projects, built on my own initiative after a season
+as a field technician at Reserva Natural Estancia Los Huemules (El Chaltén). I combined direct
+field knowledge with Sentinel-2 imagery (March 2021) to train a Random Forest classifier
+distinguishing Forest, Water, Snow, and Rock across 15,000 hectares of Andean terrain. The
+self-reported result at the time was ~98% accuracy — a figure I'd hold to a stricter
+methodological bar today, but it marked the starting point for everything that followed.
+:::
+
+## <span class="lang-es">Tesina de Grado — Melena de León</span><span class="lang-en">Undergrad Thesis — Lion's Mane</span>
+
+::: {.lang-es}
+<span class="status-pill status-early">🍄 INTECh (CONICET/UNSAM), 2023</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-early">🍄 INTECh (CONICET/UNSAM), 2023</span>
+:::
+
+::: {.lang-es}
+"Producción del Hongo Comestible Melena de León: Sustratos, Cepas y Eficiencia Biológica" —
+tesina para la Licenciatura en Ciencias Biológicas, dirigida por el Dr. Edgardo Albertó en el
+laboratorio de Micología del INTECh. Primer estudio de cultivo de *Hericium erinaceus* en ese
+laboratorio: comparé dos cepas y dos fórmulas de sustrato (ambas nunca antes probadas en la
+bibliografía para esta especie), obteniendo un **72% de eficiencia biológica** con la
+combinación cepa ICFC 885/19 + sustrato de pellet de soja — comparable a valores publicados
+internacionalmente. El sustrato resultó ser el único factor estadísticamente significativo
+(ANOVA de dos factores, p=0,02).
+:::
+::: {.lang-en}
+"Producción del Hongo Comestible Melena de León: Sustratos, Cepas y Eficiencia Biológica"
+(Lion's Mane mushroom production: substrates, strains, and biological efficiency) — undergrad
+thesis for the Licenciatura en Ciencias Biológicas, directed by Dr. Edgardo Albertó at INTECh's
+Mycology lab. First cultivation study of *Hericium erinaceus* at that lab: I compared two
+strains and two substrate formulas (both never before tested in the literature for this
+species), reaching **72% biological efficiency** with strain ICFC 885/19 + a soy-pellet
+substrate — comparable to internationally published values. Substrate was the only
+statistically significant factor (two-way ANOVA, p=0.02).
+:::
+
+## Oxygen
+
+::: {.lang-es}
+<span class="status-pill status-active">🌳 Consultor GIS</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-active">🌳 GIS Consultant</span>
+:::
+
+::: {.lang-es}
+Consultor técnico GIS para proyectos de carbono y MRV (Medición, Reporte y Verificación).
+Desarrollé el análisis geoespacial de stock de carbono para un [App de Google Earth Engine
+desplegado en producción](https://oxyg-470115.projects.earthengine.app/view/salta2-oxygen) sobre
+bosques de la provincia de Salta, combinando MapBiomas Colección 2 (máscara forestal) y biomasa
+NASA/ORNL, con clasificación en tres niveles de stock de carbono y una herramienta interactiva
+de análisis por polígono personalizado.
+:::
+::: {.lang-en}
+GIS technical consultant for carbon and MRV (Measurement, Reporting, and Verification) projects.
+I built the carbon-stock geospatial analysis for a [production-deployed Google Earth Engine
+App](https://oxyg-470115.projects.earthengine.app/view/salta2-oxygen) covering forest area in
+Salta province, combining MapBiomas Collection 2 (forest mask) and NASA/ORNL biomass data, with
+a three-tier carbon-stock classification and an interactive custom-polygon analysis tool.
+:::
+
+## <span class="lang-es">Trabajo de campo</span><span class="lang-en">Fieldwork</span>
+
+::: {.lang-es}
+Antes de dedicarme de lleno al análisis geoespacial, pasé varias temporadas en el campo: manejo
+de especies invasoras y monitoreo de fauna en el Parque Nacional Perito Moreno (Administración
+de Parques Nacionales), e investigación turística y relevamiento de flora/fauna en Barreal, San
+Juan (Pirqa). Esa base de campo es la que sostiene mi criterio a la hora de validar productos
+satelitales — sé lo que hay en el terreno detrás de cada píxel.
+:::
+::: {.lang-en}
+Before moving fully into geospatial analysis, I spent several seasons in the field: invasive
+species management and wildlife monitoring at Parque Nacional Perito Moreno (Administración de
+Parques Nacionales), and tourism research plus flora/fauna surveys in Barreal, San Juan (Pirqa).
+That field foundation is what grounds my judgment when validating satellite products — I know
+what's actually on the ground behind each pixel.
+:::

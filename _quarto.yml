@@ -1,0 +1,51 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!notes/"
+
+website:
+  title: "Ramón Peña Agrest"
+  site-url: ""
+  favicon: favicon.svg
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Inicio / Home"
+      - href: fire-mapping.qmd
+        text: "Mapeo de Fuego"
+      - href: fire-risk-research.qmd
+        text: "Modelado de Riesgo"
+      - href: aredd.qmd
+        text: "AREDD+"
+      - href: ftw.qmd
+        text: "Fields of the World"
+      - href: other-work.qmd
+        text: "Otros Trabajos"
+    right:
+      - href: cv.qmd
+        text: "CV"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ram%C3%B3n-pe%C3%B1a-agrest/
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/ramon-pa
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:ramonpenia@gmail.com
+        aria-label: Email
+  page-footer:
+    center: "© 2026 Ramón Peña Agrest"
+    border: false
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    include-after-body: lang-toggle.html
+    toc: false
+    page-layout: article
+    title-block-banner: false
+    grid:
+      body-width: 850px
+    link-external-newwindow: true

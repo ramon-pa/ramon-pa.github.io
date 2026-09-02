@@ -1,0 +1,91 @@
+---
+pagetitle: "Wildfire Risk Modeling"
+description: "PhD proposal — fire-spread simulation, Universidad Nacional del Comahue / CONICET"
+---
+
+::: {.lang-es}
+<span class="status-pill status-pending">⏳ Propuesta enviada — resultado esperado enero 2027</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-pending">⏳ Proposal submitted — decision expected January 2027</span>
+:::
+
+# <span class="lang-es">Modelado de Riesgo de Incendios</span><span class="lang-en">Wildfire Risk Modeling</span>
+
+::: {.lang-es}
+**Simulación de incendios para el norte de la Patagonia Andina: efectos de la vegetación, la
+topografía y la meteorología sobre la propagación del fuego.**
+
+Propuesta de Beca Doctoral CONICET, Doctorado en Biología (Universidad Nacional del Comahue).
+Directora: Mónica Denham (CONICET-UNRN/CITECCA). Codirector: Thomas Kitzberger
+(INIBIOMA-CONICET). Asesor: Iván Barberá (INIBIOMA-CONICET) — el mismo Iván Barberá que lidera
+la validación de MapBiomas Fuego en la que trabajo actualmente.
+:::
+::: {.lang-en}
+**Fire simulation for the northern Andean Patagonia: effects of vegetation, topography, and
+weather on fire spread.**
+
+CONICET Doctoral Fellowship proposal, Doctorado en Biología (Universidad Nacional del Comahue).
+Director: Mónica Denham (CONICET-UNRN/CITECCA). Co-director: Thomas Kitzberger
+(INIBIOMA-CONICET). Advisor: Iván Barberá (INIBIOMA-CONICET) — the same Iván Barberá who leads
+the MapBiomas Fire validation I currently work on.
+:::
+
+## <span class="lang-es">Qué propone</span><span class="lang-en">What it proposes</span>
+
+::: {.lang-es}
+Refinar el **Simulador de Incendios Patagonia (SIP)**, un modelo de propagación de tipo
+reacción-difusión-convección (RDC) desarrollado por CITECCA en colaboración con el Departamento
+de Incendios del Parque Nacional Nahuel Huapi. El SIP corre sobre GPU, calcula el Fire Weather
+Index (FWI) y permite simulación en tiempo real — pero aún no representa el efecto de la
+vegetación, ni condiciones atmosféricas más allá del viento.
+:::
+::: {.lang-en}
+Refine the **Simulador de Incendios Patagonia (SIP)**, a reaction-diffusion-convection (RDC)
+fire-spread model built by CITECCA in collaboration with Nahuel Huapi National Park's fire
+department. SIP runs on GPU, computes the Fire Weather Index (FWI), and enables real-time
+simulation — but doesn't yet represent vegetation effects or weather beyond wind.
+:::
+
+### <span class="lang-es">Objetivos</span><span class="lang-en">Objectives</span>
+
+::: {.lang-es}
+- **OE1 — Datos**: base de datos de eventos de incendio (2015–2026, norte de la Patagonia
+  Andina) combinando perímetros diarios (PlanetScope/Sentinel/Landsat), detecciones VIIRS y un
+  hindcast meteorológico WRF-SMN (Servicio Meteorológico Nacional, 4km/horario).
+- **OE2 — Modelo**: hacer que la velocidad de propagación del RDC dependa del FWI, tipo de
+  vegetación, altitud y orientación de la ladera, alimentado por campos de viento de alta
+  resolución (WindNinja).
+- **OE3 — Estimación y validación**: ajuste de parámetros con algoritmos genéticos + XGBoost
+  (inferencia bayesiana como objetivo extendido), validado con coeficiente de Sørensen-Dice e
+  índice de Jaccard sobre incendios reservados.
+- **OE4 — Preguntas ecológicas**: ¿cómo varía la velocidad de propagación entre tipos de
+  vegetación? ¿el FWI extremo atenúa el efecto de la vegetación y la topografía?
+:::
+::: {.lang-en}
+- **OE1 — Data**: fire-event database (2015–2026, northern Andean Patagonia) combining daily
+  perimeters (PlanetScope/Sentinel/Landsat), VIIRS detections, and a WRF-SMN weather hindcast
+  (Argentina's National Weather Service, 4km/hourly).
+- **OE2 — Model**: make RDC spread speed a function of FWI, vegetation type, altitude, and
+  slope aspect, fed by high-resolution wind fields (WindNinja).
+- **OE3 — Estimation & validation**: parameter fitting via genetic algorithms + XGBoost
+  (Bayesian inference as a stretch goal), validated with Sørensen-Dice and Jaccard metrics on
+  held-out fires.
+- **OE4 — Ecological questions**: how does spread rate vary across vegetation types? does
+  extreme FWI attenuate the effect of vegetation and topography?
+:::
+
+::: {.callout-caveat}
+::: {.lang-es}
+**Por qué esto importa para mi perfil**: la propuesta cita explícitamente mi trabajo en
+MapBiomas Fuego como la base de datos de factibilidad del proyecto — "el tesista participó en
+su desarrollo y es coautor del documento metodológico". Es la misma línea de trabajo aplicada
+a una escala temporal distinta: de mapear qué se quemó, a simular cómo se va a propagar.
+:::
+::: {.lang-en}
+**Why this matters for my profile**: the proposal explicitly cites my MapBiomas Fire work as
+the project's feasibility data — "the fellow participated in its development and is a co-author
+of the methodological document." It's the same line of work applied at a different time
+horizon: from mapping what burned to simulating how it will spread.
+:::
+:::

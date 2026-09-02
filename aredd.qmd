@@ -1,0 +1,102 @@
+---
+pagetitle: "AREDD+"
+description: "REDD+ opportunity screening tool for Argentina — Google Earth Engine"
+---
+
+::: {.lang-es}
+<span class="status-pill status-active">✅ v0.2 — App funcional a escala nacional</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-active">✅ v0.2 — functional national-scale app</span>
+:::
+
+# AREDD+
+
+::: {.lang-es}
+Herramienta de screening geoespacial para identificar oportunidades de proyectos REDD+ en
+bosques de Argentina, clasificando zonas por tipo de actividad elegible (conservación, manejo
+forestal mejorado, restauración). Postulada al **Premio MapBiomas Argentina 2026** (resultado
+pendiente).
+
+Surgió de una conversación con Juana Inés Espinosa Paz (especialista en REDD+ y restauración en
+Latinoamérica), cuyo proyecto real — Finca El Chaguaral, Salta (4.892 ha, VCS ID 4513, doble
+certificación VCS+CCB) — se convirtió en el caso de validación.
+:::
+::: {.lang-en}
+A geospatial screening tool to identify REDD+ project opportunities across Argentina's forests,
+classifying zones by eligible activity type (conservation, improved forest management,
+restoration). Submitted to the **Premio MapBiomas Argentina 2026** (result pending).
+
+It grew out of a conversation with Juana Inés Espinosa Paz (REDD+ and restoration specialist in
+Latin America), whose real project — Finca El Chaguaral, Salta (4,892 ha, VCS ID 4513,
+double VCS+CCB certified) — became the validation case study.
+:::
+
+## <span class="lang-es">Metodología</span><span class="lang-en">Methodology</span>
+
+::: {.lang-es}
+AREDD+ es un **MCDA (Multi-Criteria Decision Analysis)**, deliberadamente no un modelo de
+machine learning: el score debe ser auditable por Verra/CCB, y un modelo de caja negra no es
+defendible ante verificadores. El score combina stock de carbono (ESA CCI Biomass × factores
+IPCC 2006), presión de deforestación (pérdida de bosque 2014→2024 en un radio de 5km) y contexto
+legal (OTBN, Ley 26.331), con umbrales de carbono **específicos por ecorregión** — calculados
+en runtime sobre cuantiles empíricos Q25/Q75, no valores fijos nacionales — porque la biomasa
+varía radicalmente entre regiones (Monte: ~6 m³/ha vs. Bosque Andino Patagónico: ~338 m³/ha,
+según el 2° Inventario Nacional de Bosques Nativos).
+:::
+::: {.lang-en}
+AREDD+ is an **MCDA (Multi-Criteria Decision Analysis)**, deliberately not a machine-learning
+model: the score has to be auditable by Verra/CCB, and a black-box model isn't defensible to
+verifiers. The score combines carbon stock (ESA CCI Biomass × IPCC 2006 factors), deforestation
+pressure (2014→2024 forest loss within a 5km radius), and legal context (OTBN, Ley 26.331), with
+carbon thresholds **specific to each ecoregion** — computed at runtime from empirical Q25/Q75
+quantiles, not fixed national values — because biomass varies radically by region (Monte:
+~6 m³/ha vs. Bosque Andino Patagónico: ~338 m³/ha, per Argentina's 2nd National Native Forest
+Inventory).
+:::
+
+<div class="stat-row">
+<div class="stat"><div class="stat-value">7</div><div class="stat-label lang-es">ecorregiones</div><div class="stat-label lang-en">ecoregions</div></div>
+<div class="stat"><div class="stat-value">6</div><div class="stat-label lang-es">clases de zonificación</div><div class="stat-label lang-en">zoning classes</div></div>
+<div class="stat"><div class="stat-value">4,892 ha</div><div class="stat-label lang-es">caso de validación (VCS 4513)</div><div class="stat-label lang-en">validation case (VCS 4513)</div></div>
+</div>
+
+## <span class="lang-es">Validación</span><span class="lang-en">Validation</span>
+
+::: {.lang-es}
+El proyecto certificado VCS+CCB de Selva de Urundel clasificó mayormente como clase 3
+("conservación, amenaza latente") — con píxeles de clase 4-5 apareciendo inmediatamente al este,
+en la franja adyacente a la Ruta 34, donde la deforestación es activa. Este resultado es
+coherente con la certificación real del proyecto: alto carbono, con amenaza documentada en el
+entorno pero no dentro del bloque conservado.
+:::
+::: {.lang-en}
+The certified VCS+CCB Selva de Urundel project classified mostly as class 3 ("conservation,
+latent threat") — with class 4-5 pixels appearing immediately east, along Ruta 34, where
+deforestation is active. This result is coherent with the project's real certification status:
+high carbon, with documented threat nearby but not inside the conserved block.
+:::
+
+::: {.callout-caveat}
+::: {.lang-es}
+**Limitación conocida, en seguimiento**: al cruzar los umbrales de carbono satelital (ESA CCI)
+contra el Inventario Nacional de Bosques (INBN2), encontré una subestimación en las ecorregiones
+Espinal y Monte. Documentado como un flag abierto, no resuelto — parte del proceso normal de
+validar un producto satelital contra datos de campo.
+:::
+::: {.lang-en}
+**Known limitation, being tracked**: cross-checking the satellite-derived carbon thresholds
+(ESA CCI) against the National Forest Inventory (INBN2) surfaced an underestimation in the
+Espinal and Monte ecoregions. Documented as an open flag, not resolved — part of the normal
+process of validating a satellite product against field data.
+:::
+:::
+
+::: {.lang-es}
+**Stack**: Google Earth Engine (JavaScript, App pública), Python (reportlab para el PDF de
+postulación, limpieza de shapefiles), Quarto (documentación del pipeline).
+:::
+::: {.lang-en}
+**Stack**: Google Earth Engine (JavaScript, public App), Python (reportlab for the submission
+PDF, shapefile cleaning), Quarto (pipeline documentation).
+:::

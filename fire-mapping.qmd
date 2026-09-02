@@ -1,0 +1,144 @@
+---
+pagetitle: "MapBiomas Fire"
+description: "Burned-area mapping & accuracy validation — MapBiomas Argentina"
+---
+
+::: {.lang-es}
+<span class="status-pill status-active">🔥 En curso — 2025 a la fecha</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-active">🔥 Ongoing — 2025 to present</span>
+:::
+
+# <span class="lang-es">MapBiomas Fuego</span><span class="lang-en">MapBiomas Fire</span>
+
+::: {.lang-es}
+Técnico GIS en el equipo patagónico de **MapBiomas Argentina**, trabajando en el mapeo satelital
+de áreas quemadas a escala nacional. Coautor del documento técnico (ATBD) de la Colección 0 y
+responsable de la implementación del pipeline de validación de precisión de la Colección 1.
+:::
+::: {.lang-en}
+GIS Technician on MapBiomas Argentina's Patagonia team, working on national-scale satellite
+burned-area mapping. Co-author of the Collection-0 technical document (ATBD) and implementer of
+the Collection-1 accuracy-validation pipeline.
+:::
+
+<div class="stat-row">
+<div class="stat"><div class="stat-value">12,889</div><div class="stat-label lang-es">puntos de muestreo</div><div class="stat-label lang-en">sample points</div></div>
+<div class="stat"><div class="stat-value">589,797</div><div class="stat-label lang-es">observaciones de entrenamiento</div><div class="stat-label lang-en">training observations</div></div>
+<div class="stat"><div class="stat-value">1999–2025</div><div class="stat-label lang-es">serie temporal</div><div class="stat-label lang-en">time series</div></div>
+<div class="stat"><div class="stat-value">182,104 km²</div><div class="stat-label lang-es">área piloto (Patagonia)</div><div class="stat-label lang-en">pilot area (Patagonia)</div></div>
+</div>
+
+## <span class="lang-es">Fase 1 — Datos de entrenamiento del modelo</span><span class="lang-en">Phase 1 — Model training data</span>
+
+::: {.lang-es}
+Como parte de un equipo técnico de 26 personas coordinado por Iván Barberá, contribuí a la
+recolección de datos de entrenamiento para el pipeline de dos etapas de la Colección 1: un
+modelo de regresión logística dual que detecta área quemada en bosques, matorrales y pastizales
+de la Patagonia usando el archivo histórico Landsat (TM, ETM+, OLI).
+
+Mi contribución específica: dígitalización manual de ~400 puntos quemados/no quemados por evento
+de incendio a lo largo de 30 incendios, definición de las ventanas temporales pre/post-fuego
+para cada evento, y validación visual de series temporales de índices espectrales en zonas de
+clasificación ambigua. En total, esta estrategia de muestreo extrajo 589.797 observaciones de
+12.889 puntos — un enfoque **40× más eficiente** que el muestreo punto por punto convencional.
+
+Fui coautor del [Algorithm Theoretical Basis Document (ATBD)](https://github.com/barberaivan/mapbiomas-argentina-fire)
+publicado en diciembre de 2025, que documenta la metodología del piloto de Colección 0 sobre
+182.104 km² del gradiente bosque andino-patagónico → estepa.
+:::
+
+::: {.lang-en}
+As part of a 26-person technical team coordinated by Iván Barberá, I contributed to training-data
+collection for Collection 1's two-stage pipeline: a dual logistic-regression model that detects
+burned area across Patagonian forests, shrublands, and grasslands using the historical Landsat
+archive (TM, ETM+, OLI).
+
+My specific contribution: manually digitizing ~400 burned/unburned sample points per fire event
+across 30 fires, defining pre/post-fire temporal windows for each event, and visually validating
+spectral-index time series in ambiguous classification zones. In total, this sampling strategy
+extracted 589,797 observations from 12,889 points — a **40× efficiency gain** over conventional
+point-by-point sampling.
+
+I co-authored the [Algorithm Theoretical Basis Document (ATBD)](https://github.com/barberaivan/mapbiomas-argentina-fire),
+published December 2025, documenting the Collection-0 pilot methodology across 182,104 km² of
+the Andean-Patagonian forest-to-steppe gradient.
+:::
+
+## <span class="lang-es">Fase 2 — Pipeline de validación de precisión</span><span class="lang-en">Phase 2 — Accuracy validation pipeline</span>
+
+::: {.lang-es}
+Este es mi trabajo actual: implementar, en solitario, el pipeline que evalúa qué tan preciso es
+el mapa de fuego de la Colección 1 a escala nacional (279,27 Mha), sobre un diseño estadístico
+desarrollado por Iván Barberá.
+:::
+::: {.lang-en}
+This is my current work: implementing, solo, the pipeline that assesses how accurate the
+Collection-1 fire map is at national scale (279.27 Mha), built on a statistical design developed
+by Iván Barberá.
+:::
+
+::: {.lang-es}
+**Diseño**: muestreo estratificado — S1 (píxeles quemados según el mapa), S2 (evidencia externa
+de quema de MCD64A1/VIIRS/FireCCI51/FIRMS, fuera de S1), S3 (el resto, ~94% del área). Estimador
+de **Stehman (2014)**, elegido porque los estratos no coinciden con las clases del mapa. Tres
+años de validación (2003, 2013, 2022), 100 puntos/estrato/año, con un pool de reserva ordenado
+de 5.000 puntos/estrato/año. Interpretación **ciega**: los intérpretes nunca ven la etiqueta del
+mapa, con ~10% de duplicación para medir acuerdo entre intérpretes.
+:::
+::: {.lang-en}
+**Design**: stratified sampling — S1 (map's own burned pixels), S2 (external burn evidence from
+MCD64A1/VIIRS/FireCCI51/FIRMS, outside S1), S3 (everything else, ~94% of the area). **Stehman
+(2014)** estimator, chosen because the strata don't match the map's own classes. Three
+validation years (2003, 2013, 2022), 100 points/stratum/year, with a frozen ordered reserve pool
+of 5,000 points/stratum/year. **Blind** interpretation: interpreters never see the map's own
+label, with ~10% duplication to measure inter-interpreter agreement.
+:::
+
+### <span class="lang-es">Lo que construí</span><span class="lang-en">What I built</span>
+
+::: {.lang-es}
+Implementé el pipeline completo de la especificación: exportación de estratos, extracción del
+pool de muestras y generación de los CSV para interpretación (Collect Earth Online). También
+construí una herramienta interactiva en el editor de código de GEE (`ceo_val_inspector`) que,
+dado un punto, muestra series temporales NBR/NBR2/HLS/Sentinel-2 e imágenes pre/post-fuego para
+apoyar la interpretación ciega.
+:::
+::: {.lang-en}
+I implemented the full pipeline from the spec: strata export, sample-pool extraction, and CSV
+generation for interpretation (Collect Earth Online). I also built an interactive tool in the
+GEE code editor (`ceo_val_inspector`) that, given a point, renders NBR/NBR2/HLS/Sentinel-2 time
+series and pre/post-fire imagery to support blind interpretation.
+:::
+
+::: {.callout-caveat}
+::: {.lang-es}
+**Diagnosticando un error de memoria en GEE.** El diseño original fallaba con `Error code 8`
+(memoria insuficiente) en cada variante que probé: nacional, por tiles, por partición geográfica.
+Sospeché primero de la banda de estratos. Después de un test A/B controlado (5/5 fallos con la
+geometría política nacional del país vs. 3/3 éxitos con un rectángulo simple), encontré la causa
+real: la geometría del límite político de Argentina, con más de 2 millones de vértices, no la
+lógica de estratificación. Rediseñé el muestreo como un pool sin estratificar en el servidor
+(con la separación por estrato hecha localmente en pandas) — estadísticamente equivalente, mucho
+más económico en GEE.
+:::
+::: {.lang-en}
+**Diagnosing a GEE out-of-memory bug.** The original design failed with `Error code 8` (out of
+memory) on every variant I tried: national, tiled, partitioned by region. I initially suspected
+the stratum band. After a controlled A/B test (5/5 failures with Argentina's national political
+boundary geometry vs. 3/3 successes with a plain bounding-box rectangle), I found the real cause:
+the country's political-boundary geometry, with 2M+ vertices, not the stratification logic
+itself. I redesigned the sampling as an unstratified server-side pool draw (with stratum
+splitting done locally in pandas) — statistically equivalent, far cheaper on GEE.
+:::
+:::
+
+::: {.lang-es}
+**Estado actual: sin resultados de precisión todavía.** La interpretación humana de los 300
+puntos semilla aún no ha comenzado — este es trabajo activo, no un resultado cerrado.
+:::
+::: {.lang-en}
+**Current status: no accuracy results yet.** Human interpretation of the 300 seed points hasn't
+started — this is active work, not a closed result.
+:::

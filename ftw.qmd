@@ -1,0 +1,87 @@
+---
+pagetitle: "Fields of the World"
+description: "Independent validation against MapBiomas Argentina — Pampa region"
+---
+
+::: {.lang-es}
+<span class="status-pill status-active">🌾 Issue abierto — propuesta de contribución</span>
+:::
+::: {.lang-en}
+<span class="status-pill status-active">🌾 Open issue — contribution proposed</span>
+:::
+
+# Fields of the World
+
+::: {.lang-es}
+¿Qué pasa cuando tomás un modelo de IA entrenado casi enteramente con campos europeos y lo
+apuntás a Argentina? Fields of the World (FTW) es un dataset global de detección de límites de
+campos agrícolas por deep learning — de los 24 países usados para entrenarlo, 17 son europeos.
+Sudamérica casi no aparece.
+
+Superpuse sus detecciones sobre MapBiomas Argentina — un mapa de uso del suelo independiente y
+verificado en campo — para ver qué había realmente debajo de cada detección.
+:::
+::: {.lang-en}
+What happens when you take an AI model trained almost entirely on European farmland and point
+it at Argentina? Fields of the World (FTW) is a global agricultural field-boundary detection
+dataset built with deep learning — of the 24 countries it learned from, 17 are in Europe. South
+America barely appears.
+
+I overlaid its detections on MapBiomas Argentina — an independent, ground-verified land-cover
+map — to see what was actually underneath each detection.
+:::
+
+<div class="stat-row">
+<div class="stat"><div class="stat-value">76.0%</div><div class="stat-label lang-es">precisión de polígono (tile S35W061)</div><div class="stat-label lang-en">polygon precision (tile S35W061)</div></div>
+<div class="stat"><div class="stat-value">88.4%</div><div class="stat-label lang-es">F1 a nivel de píxel (tile 20HNH)</div><div class="stat-label lang-en">pixel-level F1 (tile 20HNH)</div></div>
+<div class="stat"><div class="stat-value">80×</div><div class="stat-label lang-es">diferencia de tamaño muestral entre chequeos</div><div class="stat-label lang-en">sample-size difference between checks</div></div>
+</div>
+
+::: {.lang-es}
+Aproximadamente tres de cada cuatro campos detectados corresponden a cultivo real. El resto no
+está distribuido al azar: ~10% cae sobre pastizal y ~13% sobre vegetación natural, en ambos
+chequeos, corridos de forma independiente, con una diferencia de 80× en la cantidad de campos
+analizados cada vez. Casi el mismo patrón, dos veces — lo que sugiere un error estructural, no
+ruido aleatorio, y por lo tanto algo sobre lo que se puede diseñar un filtro.
+:::
+::: {.lang-en}
+Roughly three out of every four detected fields sit on real cropland. The rest isn't scattered
+randomly: ~10% sits on pasture and ~13% on natural vegetation, in both checks, run independently,
+with an 80× difference in how many fields were analyzed each time. Almost the same pattern
+twice — which suggests a structural error, not random noise, and therefore something a filter
+could be designed around.
+:::
+
+## <span class="lang-es">Intercambio técnico real</span><span class="lang-en">A real technical exchange</span>
+
+::: {.lang-es}
+Abrí un [issue técnico](https://github.com/fieldsoftheworld/ftw-baselines/issues/262) en el
+repositorio de FTW proponiendo dos contribuciones: un filtro de post-procesamiento basado en
+MapBiomas para países con cobertura (Argentina, Brasil, Bolivia, y otros ocho), y la publicación
+de las predicciones como asset de GEE para permitir validación regional escalable.
+
+Un colaborador del equipo (Matthias Mohr) señaló que mi descarga inicial no aplicaba el filtro de
+confianza correctamente. Volví a correr el análisis el mismo día con el umbral corregido —
+76,82% vs. 76,04% sin filtrar, misma estructura de error — y en el intercambio até un cabo
+suelto more: la UI del explorador de FTW reescala el `confidence_mean` de forma no obvia (un
+"75%" visual corresponde a un valor real de ≥0,4336).
+:::
+::: {.lang-en}
+I opened a [technical issue](https://github.com/fieldsoftheworld/ftw-baselines/issues/262) on
+the FTW repo proposing two contributions: a MapBiomas-based post-processing filter for countries
+with coverage (Argentina, Brazil, Bolivia, and eight others), and publishing predictions as a
+GEE asset to enable scalable regional validation.
+
+A team collaborator (Matthias Mohr) caught that my initial download wasn't applying the
+confidence filter correctly. I re-ran the analysis same-day with the corrected threshold —
+76.82% vs. 76.04% unfiltered, same error structure — and in the exchange also tied off a loose
+end: the FTW Explorer UI rescales `confidence_mean` non-obviously (a visual "75%" corresponds to
+a real value of ≥0.4336).
+:::
+
+::: {.lang-es}
+Estas dos contribuciones (filtro, asset GEE) siguen siendo propuestas — todavía no construidas.
+:::
+::: {.lang-en}
+Both proposed contributions (filter, GEE asset) are still just that — proposals, not yet built.
+:::

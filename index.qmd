@@ -1,0 +1,142 @@
+---
+pagetitle: "Ramón Peña Agrest"
+description: "GIS Analyst & Biologist — Wildfire Risk, Land Cover, Environmental Data Science"
+---
+
+::: {.hero}
+
+# Ramón Peña Agrest
+
+::: {.lang-es}
+<p class="tagline">Biólogo & Analista GIS · Mapeo satelital de incendios y uso del suelo en
+MapBiomas Argentina · Construyendo el puente entre ecología y ciencia de datos.</p>
+:::
+::: {.lang-en}
+<p class="tagline">Biologist & GIS Analyst · Satellite-based fire and land-cover mapping at
+MapBiomas Argentina · Bridging ecology and data science.</p>
+:::
+
+<div>
+<span class="badge-role">GIS · Teledetección</span>
+<span class="badge-role">Riesgo de Incendios / Wildfire Risk</span>
+<span class="badge-role">Google Earth Engine</span>
+</div>
+
+:::
+
+## 👤 <span class="lang-es">Sobre mí</span><span class="lang-en">About</span>
+
+::: {.lang-es}
+Soy biólogo (Licenciado en Ciencias Biológicas, Universidad CAECE) especializado en
+teledetección y análisis geoespacial aplicado a incendios forestales, uso del suelo y
+conservación. Actualmente trabajo como Técnico GIS en **MapBiomas Argentina**, donde soy
+coautor del documento técnico (ATBD) de la Colección 0 de fuego y estoy construyendo el
+pipeline de validación de precisión de la Colección 1 a escala nacional.
+
+Mi trabajo se mueve constantemente entre el trabajo de campo — guardaparques, censos de fauna,
+manejo de especies invasoras — y el análisis satelital en Google Earth Engine. Esa doble base
+es la que uso hoy para pensar en **proyección de riesgo de incendios forestales**: tengo
+sometida una propuesta de Doctorado en Biología (Universidad Nacional del Comahue, financiada
+por CONICET) para refinar un simulador de propagación de incendios de la Patagonia Andina,
+en evaluación con resultado esperado para enero de 2027.
+
+**Busco roles como Analista GIS orientados a riesgo ambiental, incendios forestales o
+monitoreo territorial** — full-time, part-time o consultoría.
+:::
+
+::: {.lang-en}
+I'm a biologist (Licenciado en Ciencias Biológicas, Universidad CAECE) specialized in remote
+sensing and geospatial analysis applied to wildfire, land cover, and conservation. I currently
+work as a GIS Technician at **MapBiomas Argentina**, where I'm a co-author of the Collection-0
+fire technical document (ATBD) and I'm building the national-scale accuracy-validation pipeline
+for Collection 1.
+
+My work moves constantly between fieldwork — park ranger support, wildlife surveys, invasive
+species management — and satellite analysis in Google Earth Engine. That combination is what
+I bring to **wildfire risk projection**: I have a submitted PhD proposal (Doctorado en
+Biología, Universidad Nacional del Comahue, CONICET-funded) to refine a fire-spread simulator
+for the Andean Patagonia, currently under review with a decision expected January 2027.
+
+**I'm looking for GIS Analyst roles focused on environmental risk, wildfire, or land
+monitoring** — full-time, part-time, or consulting.
+:::
+
+## 🔥 <span class="lang-es">Trabajo destacado</span><span class="lang-en">Featured work</span>
+
+::: {.card-project .card-flagship}
+### [MapBiomas Fire — <span class="lang-es">Mapeo y Validación de Área Quemada</span><span class="lang-en">Burned-Area Mapping & Validation</span>](fire-mapping.qmd)
+
+::: {.lang-es}
+Coautor del ATBD y responsable de la implementación del pipeline de validación de precisión
+(diseño Stehman 2014) para la Colección 1 de fuego de Argentina — incluye un caso real de
+diagnóstico y solución de un error de memoria en Google Earth Engine.
+:::
+::: {.lang-en}
+ATBD co-author and implementer of the accuracy-validation pipeline (Stehman 2014 design) for
+Argentina's Collection-1 fire product — includes a real GEE out-of-memory bug I diagnosed and
+fixed.
+:::
+:::
+
+::: {.card-project}
+### [<span class="lang-es">Modelado de Riesgo de Incendios — Propuesta Doctoral</span><span class="lang-en">Wildfire Risk Modeling — PhD Proposal</span>](fire-risk-research.qmd)
+
+::: {.lang-es}
+Propuesta sometida a CONICET para refinar un simulador de propagación de incendios (SIP) para
+el norte de la Patagonia Andina, incorporando vegetación, topografía y meteorología.
+:::
+::: {.lang-en}
+CONICET-submitted proposal to refine a fire-spread simulator (SIP) for the northern Andean
+Patagonia, incorporating vegetation, topography, and weather.
+:::
+:::
+
+::: {.card-project}
+### [AREDD+ — <span class="lang-es">Screening de Oportunidades REDD+</span><span class="lang-en">REDD+ Opportunity Screening</span>](aredd.qmd)
+
+::: {.lang-es}
+Herramienta MCDA en Google Earth Engine para identificar oportunidades de proyectos REDD+ en
+Argentina, validada contra un proyecto de carbono certificado VCS+CCB real.
+:::
+::: {.lang-en}
+An MCDA tool in Google Earth Engine to identify REDD+ project opportunities across Argentina,
+validated against a real VCS+CCB-certified carbon project.
+:::
+:::
+
+::: {.card-project}
+### [Fields of the World — <span class="lang-es">Validación Independiente</span><span class="lang-en">Independent Validation</span>](ftw.qmd)
+
+::: {.lang-es}
+Validación de un modelo global de detección de campos agrícolas contra MapBiomas Argentina en
+la Pampa, con una propuesta de contribución abierta al equipo de Fields of the World.
+:::
+::: {.lang-en}
+Validation of a global crop-field detection model against MapBiomas Argentina in the Pampa,
+including an open contribution proposal to the Fields of the World team.
+:::
+:::
+
+## 🧰 <span class="lang-es">Stack técnico</span><span class="lang-en">Tech stack</span>
+
+::: {.lang-es}
+**GIS/Teledetección**: Google Earth Engine (JavaScript + Python), QGIS, ArcGIS Pro/Online,
+Sentinel-2, Landsat, MODIS/FIRMS, VIIRS. **Datos & análisis**: Python (geopandas, duckdb,
+pyarrow), R, análisis estadístico (ANOVA, muestreo estratificado, estimadores Stehman).
+**Otros**: Quarto, git, trabajo de campo (censos de fauna, manejo de especies invasoras).
+:::
+::: {.lang-en}
+**GIS/Remote sensing**: Google Earth Engine (JavaScript + Python), QGIS, ArcGIS Pro/Online,
+Sentinel-2, Landsat, MODIS/FIRMS, VIIRS. **Data & analysis**: Python (geopandas, duckdb,
+pyarrow), R, statistical analysis (ANOVA, stratified sampling, Stehman estimators).
+**Other**: Quarto, git, fieldwork (wildlife surveys, invasive species management).
+:::
+
+## 📧 <span class="lang-es">Contacto</span><span class="lang-en">Contact</span>
+
+::: {.lang-es}
+📧 [ramonpenia@gmail.com](mailto:ramonpenia@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ram%C3%B3n-pe%C3%B1a-agrest/) · [CV](cv.qmd)
+:::
+::: {.lang-en}
+📧 [ramonpenia@gmail.com](mailto:ramonpenia@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ram%C3%B3n-pe%C3%B1a-agrest/) · [CV](cv.qmd)
+:::

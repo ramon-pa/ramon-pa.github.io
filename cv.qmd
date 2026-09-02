@@ -1,0 +1,58 @@
+---
+pagetitle: "CV"
+description: "Curriculum vitae — Ramón Peña Agrest"
+---
+
+# CV
+
+::: {.lang-es}
+Podés descargar mi CV actualizado en PDF, o ver el resumen de experiencia y educación abajo.
+
+📄 [**Descargar CV (PDF)**](files/Ramon_Pena_Agrest_CV.pdf)
+:::
+::: {.lang-en}
+Download my current CV as a PDF, or see the experience and education summary below.
+
+📄 [**Download CV (PDF)**](files/Ramon_Pena_Agrest_CV.pdf)
+:::
+
+## <span class="lang-es">Experiencia</span><span class="lang-en">Experience</span>
+
+::: {.lang-es}
+- **Técnico GIS**, MapBiomas Argentina · Freelance — sep. 2025–presente
+- **Consultor GIS**, Oxygen — carbono/MRV
+- **Técnico de campo**, Reserva Natural Estancia Los Huemules · temporada — oct. 2024–mar. 2025,
+  El Chaltén
+- **Investigador Asistente y Fotógrafo**, Pirqa · temporada — jun. 2024–mar. 2025, Barreal,
+  San Juan
+- **Manejo de especies invasoras y monitoreo de fauna**, Administración de Parques Nacionales ·
+  pasantía — feb.–mar. 2023, Parque Nacional Perito Moreno
+- **Pasante**, Banco de Bosques — 2020–2021
+:::
+::: {.lang-en}
+- **GIS Technician**, MapBiomas Argentina · Freelance — Sep 2025–present
+- **GIS Consultant**, Oxygen — carbon/MRV
+- **Field Technician**, Reserva Natural Estancia Los Huemules · seasonal — Oct 2024–Mar 2025,
+  El Chaltén
+- **Research Assistant & Photographer**, Pirqa · seasonal — Jun 2024–Mar 2025, Barreal, San Juan
+- **Invasive Species Control & Wildlife Monitoring**, Administración de Parques Nacionales ·
+  internship — Feb–Mar 2023, Parque Nacional Perito Moreno
+- **Intern**, Banco de Bosques — 2020–2021
+:::
+
+## <span class="lang-es">Educación</span><span class="lang-en">Education</span>
+
+::: {.lang-es}
+- **Licenciatura en Ciencias Biológicas** (Biotecnología y Biología Molecular), Universidad
+  CAECE — mar. 2019–jun. 2024
+- **GIS for Climate Action**, Esri — mar. 2025
+- **Introduction to Computer Science (CS50)**, Harvard University — mar. 2025
+- **Data Analyst Career Path**, DataCamp — abr.–jun. 2025
+:::
+::: {.lang-en}
+- **Licenciatura en Ciencias Biológicas** (Biotechnology and Molecular Biology), Universidad
+  CAECE — Mar 2019–Jun 2024
+- **GIS for Climate Action**, Esri — Mar 2025
+- **Introduction to Computer Science (CS50)**, Harvard University — Mar 2025
+- **Data Analyst Career Path**, DataCamp — Apr–Jun 2025
+:::
