@@ -4,10 +4,10 @@ description: "REDD+ opportunity screening tool for Argentina — Google Earth En
 ---
 
 ::: {.lang-es}
-<span class="status-pill status-active">✅ v0.2 — script funcional a escala nacional</span>
+<span class="status-pill status-active">✅ v0.2 — App pública funcional a escala nacional</span>
 :::
 ::: {.lang-en}
-<span class="status-pill status-active">✅ v0.2 — functional national-scale script</span>
+<span class="status-pill status-active">✅ v0.2 — functional national-scale public App</span>
 :::
 
 # AREDD+
@@ -93,12 +93,18 @@ process of validating a satellite product against field data.
 :::
 
 ::: {.lang-es}
-**Stack**: Google Earth Engine (JavaScript, script en el editor de código — una App pública con
-filtros interactivos es la meta de v1.0, todavía no construida), Python (reportlab para el PDF de
-postulación, limpieza de shapefiles), Quarto (documentación del pipeline).
+**Probá el mapa**: [App pública en Google Earth Engine](https://organic-service-466317-d9.projects.earthengine.app/view/aredd)
+(v0.2 — el mapa puede tardar en cargar la primera vez).
+
+**Stack**: Google Earth Engine (JavaScript, desplegado como App pública — filtros interactivos
+adicionales son la meta de v1.0), Python (reportlab para el PDF de postulación, limpieza de
+shapefiles), Quarto (documentación del pipeline).
 :::
 ::: {.lang-en}
-**Stack**: Google Earth Engine (JavaScript, code editor script — a public interactive App is the
-v1.0 goal, not built yet), Python (reportlab for the submission PDF, shapefile cleaning), Quarto
+**Try the map**: [Public App on Google Earth Engine](https://organic-service-466317-d9.projects.earthengine.app/view/aredd)
+(v0.2 — the map may take a moment to load on first visit).
+
+**Stack**: Google Earth Engine (JavaScript, deployed as a public App — additional interactive
+filters are the v1.0 goal), Python (reportlab for the submission PDF, shapefile cleaning), Quarto
 (pipeline documentation).
 :::
