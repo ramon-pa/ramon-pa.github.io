@@ -3,6 +3,7 @@ _site/
 .quarto/
 /notes/
 CLAUDE.md
+/Linkedin/
 
 /.quarto/
 **/*.quarto_ipynb
